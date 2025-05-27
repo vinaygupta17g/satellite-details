@@ -13,7 +13,7 @@ app.use("/satellite",satelliteRouter);
 
 app.get("/",(req,res)=>
 {
-    res.send("check satellite on port 50001/satellite/getsatellite");
+    res.send(`check satellite on port ${port}/satellite/getsatellite`);
 })
 
 app.listen(port,()=>
