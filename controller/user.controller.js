@@ -9,7 +9,11 @@ export const createuser = async (req,res)=>
 }
 export const updateuser = async (req,res)=>
 {
-    res.send("User updated");
+    let userid =req.params.id;
+    const {name,email,password,mobile}=req.body;
+    await userModel.updateOne({_id:userid},{$set:{name:name,email:email,password:password,mobile:mobile}})
+    let userData =await userModel.findById(userid);
+    res.send(userData);
 }
 export const deleteuser = async (req,res)=>
 {
