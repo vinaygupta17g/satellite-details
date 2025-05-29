@@ -3,7 +3,7 @@ import { createuser, deleteuser, getalluser, updateuser } from '../controller/us
 let userRouter = express.Router();
 userRouter.get("/getalluser",getalluser);
 userRouter.post("/createuser",createuser);
-userRouter.delete("/deleteuser",deleteuser);
+userRouter.delete("/deleteuser/:id",deleteuser);
 userRouter.put("/updateuser/:id",updateuser);
 
 export {userRouter}

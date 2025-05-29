@@ -17,7 +17,14 @@ export const updateuser = async (req,res)=>
 }
 export const deleteuser = async (req,res)=>
 {
-    res.send("User deleted");
+    let userid=req.params.id;
+    let userData =await userModel.findById(userid);
+    await userModel.deleteOne({_id:userid})
+    let respons={
+        userData:userData
+        ,status:"deleted"
+    }
+    res.send(respons);
 }
 export const getalluser = async (req,res)=>
 {
