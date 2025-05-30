@@ -48,5 +48,5 @@ export const login=async (req,res)=>
     const isMatch=await bcrypt.compare(password,userData.password)
     if(!isMatch)
         return res.send("password not found")
-    res.send(isMatch)
+    res.send(userData)
 }
