@@ -8,3 +8,5 @@ update-satellite https://satellite-detail.onrender.com/satellite/updatesatellite
 delete-satellite https://satellite-detail.onrender.com/satellite/deletesatellite
 get-satellite-by-id https://satellite-detail.onrender.com/satellite/getsatellitebyid/id
 get-satellite-by-name https://satellite-detail.onrender.com/satellite/getsatellitebyname/name
+
+for localhost http://localhost:5001/satellite/getsatellite
